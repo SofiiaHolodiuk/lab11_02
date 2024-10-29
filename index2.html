@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обчислення арифметичних виразів</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            font-family: 'Verdana', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculation-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #555;
+        }
+        p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculation-content">
+        <h1>Обчислення арифметичних виразів</h1>
+        <script> 
+            "use strict";
+            const x = parseInt(prompt("Введіть значення х", ""));
+            if (!isNaN(x)) {
+                let a = x / x + 7 * x + 10;
+                let b = x * x - 7 / x - 10; 
+                if (b != 0) {
+                    let c = a / b;
+                    alert("c=" + c);
+                } else {
+                    alert("На нуль ділити не можна чи можна, але ми не ділимо");
+                }
+            } else {
+                alert("Ви не ввели ніякого значення, оновіть сторінку і повторіть спробу");
+            }
+        </script>
+    </div>
+</body>
+</html>
